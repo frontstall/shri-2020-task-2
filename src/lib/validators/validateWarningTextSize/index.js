@@ -1,11 +1,11 @@
-const getNodes = (ast, node) => {
-  const result = [];
+// const getNodes = (ast, node) => {
+//   const result = [];
 
-  const iter = (tree) => {
-    const { children } = tree;
-  };
+//   const iter = (tree) => {
+//     const { children } = tree;
+//   };
 
-  return result;
-};
+//   return result;
+// };
 
-export default (ast) => {};
+export default () => [];
