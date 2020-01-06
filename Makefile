@@ -7,6 +7,9 @@ build:
 
 .PHONY: build
 
+develop:
+	npm run develop
+
 lint:
 	npm run lint
 
