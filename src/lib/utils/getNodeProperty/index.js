@@ -9,7 +9,12 @@ export default (node, propertyName) => {
 
   const propertyType = get(property, ['value', 'type']);
 
-  return propertyType === 'Literal'
-    ? get(property, ['value', 'value'])
-    : get(property, ['value', 'children']);
+  switch (propertyType) {
+    case 'Array':
+      return get(property, ['value', 'children']);
+    case 'Object':
+      return get(property, ['value']);
+    default:
+      return get(property, ['value', 'value']);
+  }
 };
