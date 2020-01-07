@@ -1,5 +1,4 @@
 import isEmpty from 'lodash/isEmpty';
-import get from 'lodash/get';
 
 import { getNodes, getModificatorValue, createError } from '../../utils';
 import { errorsConfig, buttonSizes } from '../../config';

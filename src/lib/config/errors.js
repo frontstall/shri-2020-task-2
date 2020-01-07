@@ -9,5 +9,9 @@ export default {
       error:
         'Размер кнопки блока warning должен быть на 1 шаг больше размера текста',
     },
+    INVALID_BUTTON_POSITION: {
+      code: 'WARNING.INVALID_BUTTON_POSITION',
+      error: 'Кнопка должна размещаться после блока placeholder',
+    },
   },
 };

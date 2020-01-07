@@ -10,7 +10,7 @@ export default (tree, callback = () => {}) => {
     callback(currentNode);
 
     if (children) {
-      children.forEach((child) => {
+      children.reverse().forEach((child) => {
         nodes.push(child);
       });
     }
