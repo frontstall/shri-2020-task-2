@@ -1,8 +1,8 @@
 import parse from 'json-to-ast';
 
-import traverseTree from '../index';
+import { json1, json2, json3 } from '../../../fixtures';
 
-import { json1, json2, json3 } from '../fixtures';
+import traverseTree from '../index';
 
 let nodesCount = 0;
 

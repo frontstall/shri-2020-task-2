@@ -1,9 +1,9 @@
 import parse from 'json-to-ast';
 
+import { array, json2, object } from '../../../fixtures';
 import getNodeProperty from '../index';
-import { array, json, object } from '../fixtures/fixtures';
 
-const ast = parse(json);
+const ast = parse(json2);
 
 test('returns literal type property', () => {
   expect(getNodeProperty(ast, 'block')).toBe('warning');
