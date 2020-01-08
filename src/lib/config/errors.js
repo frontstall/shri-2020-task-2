@@ -13,5 +13,9 @@ export default {
       code: 'WARNING.INVALID_BUTTON_POSITION',
       error: 'Кнопка должна размещаться после блока placeholder',
     },
+    INVALID_PLACEHOLDER_SIZE: {
+      code: 'WARNING.INVALID_PLACEHOLDER_SIZE',
+      error: 'Размер блока placeholder может быть только s, m или l',
+    },
   },
 };
