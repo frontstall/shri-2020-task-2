@@ -5,11 +5,13 @@ import { traverseTree, getNodeName } from '../../utils';
 import validateButtonPosition from './validateButtonPosition';
 import validateButtonSize from './validateButtonSize';
 import validateTextSize from './validateTextSize';
+import validatePlaceholderSize from './validatePlaceholderSize';
 
 const validators = [
   validateButtonPosition,
   validateButtonSize,
   validateTextSize,
+  validatePlaceholderSize,
 ];
 
 const validate = (ast) => {
