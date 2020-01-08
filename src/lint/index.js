@@ -1,7 +1,7 @@
 import parse from 'json-to-ast';
 import reduce from 'lodash/reduce';
 
-import * as validators from './validators';
+import * as validators from '../validators';
 
 export default (json) => {
   const ast = parse(json);

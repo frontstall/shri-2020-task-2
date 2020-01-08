@@ -1,4 +1,4 @@
-import lint from './lib/lint';
+import lint from './lint';
 
 const scope = typeof window === 'undefined' ? global : window;
 

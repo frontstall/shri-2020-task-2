@@ -18,4 +18,24 @@ export default {
       error: 'Размер блока placeholder может быть только s, m или l',
     },
   },
+  TEXT: {
+    SEVERAL_H1: {
+      code: 'TEXT.SEVERAL_H1',
+      error: 'Не более одного заголовка h1 на странице',
+    },
+    INVALID_H2_POSITION: {
+      code: 'TEXT.INVALID_H2_POSITION',
+      error: 'Заголовок уровня h2 не может находиться перед заголовком h1',
+    },
+    INVALID_H3_POSITION: {
+      code: 'TEXT.INVALID_H3_POSITION',
+      error: 'Заголовок уровня h3 не может находиться перед заголовком h2',
+    },
+  },
+  GRID: {
+    TOO_MUCH_MARKETING_BLOCKS: {
+      code: 'GRID.TOO_MUCH_MARKETING_BLOCKS',
+      error: 'Слишком много рекламы',
+    },
+  },
 };
