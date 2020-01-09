@@ -1,11 +1,17 @@
 import parse from 'json-to-ast';
 
-import { json, result } from './fixtures';
+import { objectJson, objectResult, arrayJson, arrayResult } from './fixtures';
 
 import getChildren from '../index';
 
-test('returns children', () => {
-  const node = parse(json);
+test('json is object', () => {
+  const node = parse(objectJson);
 
-  expect(getChildren(node)).toEqual(result);
+  expect(getChildren(node)).toEqual(objectResult);
+});
+
+test('json is array', () => {
+  const node = parse(arrayJson);
+
+  expect(getChildren(node)).toEqual(arrayResult);
 });

@@ -19,6 +19,8 @@ const normalizeChildren = (children) => {
 };
 
 export default (node) => {
+  if (node.type === 'Array') return node.children;
+
   const children = getNodeProperty(node, 'content');
 
   return children ? normalizeChildren(children) : children;
