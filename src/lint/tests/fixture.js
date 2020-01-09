@@ -22,6 +22,12 @@ export const json = `{
                       "block": "header",
                       "elem": "logo"
                   },
+                  {
+                    "block": "text",
+                    "mods": {
+                        "type": "h1"
+                    }
+                  },
                   [
                       {
                           "block": "onoffswitch",
@@ -636,6 +642,12 @@ export const json = `{
                                                       }
                                                   ],
                                                   "content": [
+                                                      {
+                                                          "block": "text",
+                                                          "mods": {
+                                                              "type": "h2"
+                                                          }
+                                                      },
                                                       {
                                                           "block": "text",
                                                           "mods": {
@@ -1538,6 +1550,12 @@ export const json = `{
                                                                               }
                                                                           ],
                                                                           "content": [
+                                                                              {
+                                                                                "block": "text",
+                                                                                "mods": {
+                                                                                    "type": "h1"
+                                                                                }
+                                                                              },
                                                                               {
                                                                                   "block": "text",
                                                                                   "mods": {
@@ -2585,16 +2603,32 @@ export const result = [
     error:
       'Размер кнопки блока warning должен быть на 1 шаг больше размера текста',
     location: {
-      end: { column: 56, line: 209 },
-      start: { column: 55, line: 204 },
+      end: { column: 56, line: 215 },
+      start: { column: 55, line: 210 },
     },
   },
   {
     code: 'WARNING.INVALID_PLACEHOLDER_SIZE',
     error: 'Размер блока placeholder может быть только s, m или l',
     location: {
-      end: { column: 56, line: 114 },
-      start: { column: 55, line: 108 },
+      end: { column: 56, line: 120 },
+      start: { column: 55, line: 114 },
+    },
+  },
+  {
+    code: 'TEXT.SEVERAL_H1',
+    error: 'Не более одного заголовка h1 на странице',
+    location: {
+      end: { column: 80, line: 1558 },
+      start: { column: 79, line: 1553 },
+    },
+  },
+  {
+    code: 'TEXT.INVALID_H2_POSITION',
+    error: 'Заголовок уровня h2 не может находиться перед заголовком h1',
+    location: {
+      end: { column: 80, line: 1558 },
+      start: { column: 79, line: 1553 },
     },
   },
 ];
