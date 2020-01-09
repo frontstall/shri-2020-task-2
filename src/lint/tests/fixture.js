@@ -211,7 +211,15 @@ export const json = `{
                                                           "block": "button",
                                                           "mods": {
                                                               "size": "l"
-                                                          }
+                                                          },
+                                                          "content": [
+                                                                {
+                                                                    "block": "text",
+                                                                    "mods": {
+                                                                        "size": "l"
+                                                                    }
+                                                                }
+                                                            ]
                                                       }
                                                   ]
                                               }
@@ -2605,8 +2613,16 @@ export const result = [
     error:
       'Размер кнопки блока warning должен быть на 1 шаг больше размера текста',
     location: {
-      end: { column: 56, line: 215 },
+      end: { column: 56, line: 223 },
       start: { column: 55, line: 210 },
+    },
+  },
+  {
+    code: 'WARNING.TEXT_SIZES_SHOULD_BE_EQUAL',
+    error: 'Тексты в блоке warning должны быть одного размера',
+    location: {
+      end: { column: 40, line: 227 },
+      start: { column: 39, line: 82 },
     },
   },
   {
@@ -2621,24 +2637,24 @@ export const result = [
     code: 'TEXT.SEVERAL_H1',
     error: 'Не более одного заголовка h1 на странице',
     location: {
-      end: { column: 80, line: 1558 },
-      start: { column: 79, line: 1553 },
+      end: { column: 80, line: 1566 },
+      start: { column: 79, line: 1561 },
     },
   },
   {
     code: 'TEXT.INVALID_H2_POSITION',
     error: 'Заголовок уровня h2 не может находиться перед заголовком h1',
     location: {
-      end: { column: 80, line: 1558 },
-      start: { column: 79, line: 1553 },
+      end: { column: 80, line: 1566 },
+      start: { column: 79, line: 1561 },
     },
   },
   {
     code: 'TEXT.INVALID_H3_POSITION',
     error: 'Заголовок уровня h3 не может находиться перед заголовком h2',
     location: {
-      end: { column: 56, line: 2536 },
-      start: { column: 55, line: 2512 },
+      end: { column: 56, line: 2544 },
+      start: { column: 55, line: 2520 },
     },
   },
 ];
