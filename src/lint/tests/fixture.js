@@ -2405,7 +2405,8 @@ export const json = `{
                                                                   "mods": {
                                                                       "view": "primary",
                                                                       "size": "xxl",
-                                                                      "align": "center"
+                                                                      "align": "center",
+                                                                      "type": "h3"
                                                                   },
                                                                   "content": [
                                                                       {
@@ -2513,7 +2514,8 @@ export const json = `{
                                                           "mods": {
                                                               "view": "link",
                                                               "size": "xl",
-                                                              "align": "center"
+                                                              "align": "center",
+                                                              "type": "h2"
                                                           },
                                                           "content": [
                                                               {
@@ -2629,6 +2631,14 @@ export const result = [
     location: {
       end: { column: 80, line: 1558 },
       start: { column: 79, line: 1553 },
+    },
+  },
+  {
+    code: 'TEXT.INVALID_H3_POSITION',
+    error: 'Заголовок уровня h3 не может находиться перед заголовком h2',
+    location: {
+      end: { column: 56, line: 2536 },
+      start: { column: 55, line: 2512 },
     },
   },
 ];
