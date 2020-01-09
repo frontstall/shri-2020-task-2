@@ -5,9 +5,9 @@ import validateTextSize from './validateTextSize';
 import validatePlaceholderSize from './validatePlaceholderSize';
 
 const validators = [
-  // validateButtonPosition,
-  // validateButtonSize,
-  // validateTextSize,
+  validateButtonPosition,
+  validateButtonSize,
+  validateTextSize,
   validatePlaceholderSize,
 ];
 
