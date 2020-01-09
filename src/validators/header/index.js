@@ -12,6 +12,7 @@ export default (ast) => {
   const errors = [];
   let afterH1 = false;
   let afterH2 = false;
+  let afterH3 = false;
 
   const callback = (node) => {
     const nodeName = getNodeName(node);
@@ -27,12 +28,12 @@ export default (ast) => {
       errors.push(error);
     }
 
-    if (headerType === 'h2' && afterH1) {
+    if (headerType === 'h1' && afterH2) {
       const error = createError(errorData.INVALID_H2_POSITION, node);
       errors.push(error);
     }
 
-    if (headerType === 'h3' && afterH2) {
+    if (headerType === 'h2' && afterH3) {
       const error = createError(errorData.INVALID_H3_POSITION, node);
       errors.push(error);
     }
@@ -43,6 +44,10 @@ export default (ast) => {
 
     if (headerType === 'h2') {
       afterH2 = true;
+    }
+
+    if (headerType === 'h3') {
+      afterH3 = true;
     }
   };
 
