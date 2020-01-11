@@ -2645,16 +2645,16 @@ export const result = [
     code: 'TEXT.INVALID_H2_POSITION',
     error: 'Заголовок уровня h2 не может находиться перед заголовком h1',
     location: {
-      end: { column: 80, line: 1566 },
-      start: { column: 79, line: 1561 },
+      end: { column: 56, line: 658 },
+      start: { column: 55, line: 653 },
     },
   },
   {
     code: 'TEXT.INVALID_H3_POSITION',
     error: 'Заголовок уровня h3 не может находиться перед заголовком h2',
     location: {
-      end: { column: 56, line: 2544 },
-      start: { column: 55, line: 2520 },
+      end: { column: 64, line: 2428 },
+      start: { column: 63, line: 2411 },
     },
   },
 ];

@@ -10,9 +10,9 @@ const errorData = errorsConfig.TEXT;
 
 export default (ast) => {
   const errors = [];
-  let afterH1 = false;
-  let afterH2 = false;
-  let afterH3 = false;
+  let lastH1;
+  let lastH2;
+  let lastH3;
 
   const callback = (node) => {
     const nodeName = getNodeName(node);
@@ -23,31 +23,31 @@ export default (ast) => {
 
     if (!headerType) return;
 
-    if (headerType === 'h1' && afterH1) {
+    if (headerType === 'h1' && lastH1) {
       const error = createError(errorData.SEVERAL_H1, node);
       errors.push(error);
     }
 
-    if (headerType === 'h1' && afterH2) {
-      const error = createError(errorData.INVALID_H2_POSITION, node);
+    if (headerType === 'h1' && lastH2) {
+      const error = createError(errorData.INVALID_H2_POSITION, lastH2);
       errors.push(error);
     }
 
-    if (headerType === 'h2' && afterH3) {
-      const error = createError(errorData.INVALID_H3_POSITION, node);
+    if (headerType === 'h2' && lastH3) {
+      const error = createError(errorData.INVALID_H3_POSITION, lastH3);
       errors.push(error);
     }
 
     if (headerType === 'h1') {
-      afterH1 = true;
+      lastH1 = node;
     }
 
     if (headerType === 'h2') {
-      afterH2 = true;
+      lastH2 = node;
     }
 
     if (headerType === 'h3') {
-      afterH3 = true;
+      lastH3 = node;
     }
   };
 

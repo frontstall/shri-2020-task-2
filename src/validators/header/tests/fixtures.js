@@ -50,7 +50,7 @@ export const error1 = [
   {
     code: 'TEXT.INVALID_H2_POSITION',
     error: 'Заголовок уровня h2 не может находиться перед заголовком h1',
-    location: { start: { line: 6, column: 3 }, end: { line: 9, column: 4 } },
+    location: { start: { line: 2, column: 3 }, end: { line: 5, column: 4 } },
   },
 ];
 
@@ -80,6 +80,6 @@ export const error2 = [
   {
     code: 'TEXT.INVALID_H3_POSITION',
     error: 'Заголовок уровня h3 не может находиться перед заголовком h2',
-    location: { start: { line: 6, column: 3 }, end: { line: 9, column: 4 } },
+    location: { start: { line: 2, column: 3 }, end: { line: 5, column: 4 } },
   },
 ];
