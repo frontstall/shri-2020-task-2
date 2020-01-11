@@ -1,12 +1,12 @@
 import validate from '../../utils/validate';
 // import validateButtonPosition from './validateButtonPosition';
-import validateButtonSize from './validateButtonSize';
+// import validateButtonSize from './validateButtonSize';
 import validateTextSize from './validateTextSize';
 // import validatePlaceholderSize from './validatePlaceholderSize';
 
 const validators = [
   // validateButtonPosition,
-  validateButtonSize,
+  // validateButtonSize,
   validateTextSize,
   // validatePlaceholderSize,
 ];
