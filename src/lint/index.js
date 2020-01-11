@@ -4,15 +4,15 @@ import reduce from 'lodash/reduce';
 import * as validators from '../validators';
 
 export default (json) => {
-  const ast = parse(json);
-  // let ast;
+  let ast;
 
-  // try {
-  // } catch (error) {
-  //   console.error('Unable to parse data. Check JSON syntax.');
+  try {
+    ast = parse(json);
+  } catch (error) {
+    console.error('Unable to parse data. Check JSON syntax.');
 
-  //   return [];
-  // }
+    return [];
+  }
 
   return reduce(
     validators,
