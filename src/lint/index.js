@@ -1,5 +1,5 @@
 import parse from 'json-to-ast';
-import reduce from 'lodash/reduce';
+// import reduce from 'lodash/reduce';
 
 import * as validators from '../validators';
 
@@ -14,13 +14,15 @@ export default (json) => {
     return [];
   }
 
-  return reduce(
-    validators,
-    (result, validate) => {
-      const errors = validate(ast);
+  return validators.validateHeaders(ast);
 
-      return [...result, ...errors];
-    },
-    [],
-  );
+  // return reduce(
+  //   validators,
+  //   (result, validate) => {
+  //     const errors = validate(ast);
+
+  //     return [...result, ...errors];
+  //   },
+  //   [],
+  // );
 };
