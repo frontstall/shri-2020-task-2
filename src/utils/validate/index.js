@@ -9,8 +9,8 @@ export default (ast, validators, nodeNameToValidate) => {
 
     if (nodeName !== nodeNameToValidate) return;
 
-    const nodeErrors = validators.reduce((acc, validateWarning) => {
-      const error = validateWarning(node);
+    const nodeErrors = validators.reduce((acc, validate) => {
+      const error = validate(node);
 
       if (error) {
         acc.push(error);
