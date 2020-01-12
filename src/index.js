@@ -1,8 +1,5 @@
 import lint from './lint';
 
-const isBrowser =
-  typeof window !== 'undefined' && typeof window.document !== 'undefined';
-
-const scope = isBrowser ? window : process;
+const scope = typeof window === 'undefined' ? global : window;
 
 scope.lint = lint;
