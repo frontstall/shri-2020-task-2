@@ -17,7 +17,12 @@ export default (json) => {
   return reduce(
     validators,
     (result, validate) => {
-      const errors = validate(ast);
+      let errors = [];
+      try {
+        errors = validate(ast);
+      } catch (error) {
+        console.error(error);
+      }
 
       return [...result, ...errors];
     },
