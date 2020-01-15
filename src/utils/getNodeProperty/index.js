@@ -1,9 +1,11 @@
 import get from 'lodash/get';
+import find from 'lodash/find';
 
 export default (node, propertyName) => {
-  const { children } = node;
+  const children = get(node, 'children', []);
 
-  const property = children.find(
+  const property = find(
+    children,
     (child) => get(child, ['key', 'value']) === propertyName,
   );
 

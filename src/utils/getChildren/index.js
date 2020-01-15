@@ -1,4 +1,5 @@
 import isArray from 'lodash/isArray';
+import get from 'lodash/get';
 
 import getNodeProperty from '../getNodeProperty';
 
@@ -19,7 +20,7 @@ const normalizeChildren = (children) => {
 };
 
 export default (node) => {
-  if (node.type === 'Array') return node.children;
+  if (node.type === 'Array') return get(node, 'children', []);
 
   const children = getNodeProperty(node, 'content');
 
